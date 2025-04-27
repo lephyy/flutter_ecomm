@@ -37,8 +37,8 @@ class _HomeMainState extends State<HomeMain> {
         backgroundColor: Colors.white,
         items: const [
           BottomNavigationBarItem(icon: Icon(Iconsax.home),label: "Home",),
-          BottomNavigationBarItem(icon: Icon(Iconsax.search_normal),label: "Search",),
-          BottomNavigationBarItem(icon: Icon(Iconsax.notification),label: "Notification",),
+          BottomNavigationBarItem(icon: Icon(Iconsax.shop),label: "Shop",),
+          BottomNavigationBarItem(icon: Icon(Iconsax.shopping_cart),label: "Cart",),
           BottomNavigationBarItem(icon: Icon(Iconsax.personalcard),label: "Profile",),
         ],
       ),
