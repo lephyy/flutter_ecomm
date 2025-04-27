@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+
+class AppModel{
+  late final String name,image,description,category;
+  late final double rating;
+  late final double review,price;
+  bool isCheck;
+
+  AppModel({
+    required this.name,
+    required this.image,
+    required this.rating,
+    required this.price,
+    required this.review,
+    required this.description,
+    required this.isCheck,
+    required this.category,
+  });
+}
+
+List<AppModel> ProductCurated = [
+  AppModel(
+      name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
+      image: "assets/images/product1.png",
+      rating: 4.5,
+      price: 39.99,
+      review: 136,
+      description: "",
+      isCheck: true,
+      category: "Blind Boxes",
+  ),
+  AppModel(
+    name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
+    image: "assets/images/product1.png",
+    rating: 4.5,
+    price: 39.99,
+    review: 136,
+    description: "",
+    isCheck: true,
+    category: "Blind Boxes",
+  ),
+  AppModel(
+    name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
+    image: "assets/images/product1.png",
+    rating: 4.5,
+    price: 39.99,
+    review: 136,
+    description: "",
+    isCheck: true,
+    category: "Blind Boxes",
+  ),
+  AppModel(
+    name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
+    image: "assets/images/product1.png",
+    rating: 4.5,
+    price: 39.99,
+    review: 136,
+    description: "",
+    isCheck: true,
+    category: "Blind Boxes",
+  ),
+  AppModel(
+    name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
+    image: "assets/images/product1.png",
+    rating: 4.5,
+    price: 39.99,
+    review: 136,
+    description: "",
+    isCheck: true,
+    category: "Blind Boxes",
+  ),
+];
+
+const myDescription1 = "Elevate your casual wardrobe with our";
+const myDescription2 = " .Crafted from premium cotton for maximum comfort, this relaxed-fit tee featured";
