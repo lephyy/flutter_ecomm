@@ -6,7 +6,7 @@ class Category{
 List<Category> category=[
   Category(
     name: "Blind Boxes",
-    image: "assets/images/sdachgame.jpg",
+    image: "assets/images/blindbox.png",
   ),
   Category(
     name: "Bags",
@@ -14,11 +14,11 @@ List<Category> category=[
   ),
   Category(
     name: "MEGA",
-    image: "assets/images/sdachgame.jpg",
+    image: "assets/images/mega.png",
   ),
   Category(
     name: "Figurine",
-    image: "assets/images/sdachgame.jpg",
+    image: "assets/images/figures.jpg",
   ),
   Category(
     name: "Accessories",
