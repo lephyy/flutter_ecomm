@@ -25,3 +25,10 @@ List<Category> category=[
     image: "assets/images/sdachgame.jpg",
   ),
 ];
+
+List<String> filterCategory =[
+  "Filter",
+  "Ratings",
+  "Price",
+  "Brand"
+];

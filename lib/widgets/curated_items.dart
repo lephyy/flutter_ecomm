@@ -12,30 +12,33 @@ class CuratedItems extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: backgroundColor2,
-            image: DecorationImage(
-              fit: BoxFit.cover,
-              image: AssetImage(productItems.image)
+        Hero(
+          tag: '${productItems.name}_${productItems.image}',
+          child: Container(
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: backgroundColor2,
+              image: DecorationImage(
+                fit: BoxFit.cover,
+                image: AssetImage(productItems.image)
+              ),
             ),
-          ),
-          height: size.height * 0.25,
-          width: size.width * 0.5,
-            child: const Padding(
-              padding: EdgeInsets.all(12),
-              child: Align(alignment: Alignment.topRight,
-                child: CircleAvatar(
-                  radius: 18,
-                  backgroundColor: Colors.black26,
-                  child: Icon(
-                    Icons.favorite_border,
-                    color: Colors.white,
+            height: size.height * 0.25,
+            width: size.width * 0.5,
+              child: const Padding(
+                padding: EdgeInsets.all(12),
+                child: Align(alignment: Alignment.topRight,
+                  child: CircleAvatar(
+                    radius: 18,
+                    backgroundColor: Colors.black26,
+                    child: Icon(
+                      Icons.favorite_border,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
               ),
-            ),
+          ),
         ),
         SizedBox(height:7),
         Row(
@@ -55,7 +58,7 @@ class CuratedItems extends StatelessWidget {
             ),
             Text(productItems.rating.toString()),
             Text(
-              "(${productItems.review})",
+              "(${productItems.review.toInt()})",
               style: const TextStyle(
                 color: Colors.black26,
               ),

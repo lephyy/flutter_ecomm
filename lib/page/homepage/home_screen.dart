@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecomm/models/category_model.dart';
+import 'package:flutter_ecomm/page/catgory.dart';
 import 'package:flutter_ecomm/utils/app_styles.dart';
 import 'package:flutter_ecomm/widgets/curated_items.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 import '../../models/model.dart';
 import '../../widgets/banner.dart';
+import '../details/detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -59,9 +61,9 @@ class _HomeScreenState extends State<HomeScreen> {
                             ),
                           ),
                         )
-                      )
+                      ),
                     ],
-                  )
+                  ),
                 ],
               ),
             ),
@@ -99,6 +101,24 @@ class _HomeScreenState extends State<HomeScreen> {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: List.generate(category.length, (index)=>InkWell(
+                  onTap: (){
+                    //Filter products based on the selected category
+                    final filterItems = ProductCurated
+                      .where((item)=>
+                        item.category.toLowerCase() ==
+                        category[index].name.toLowerCase())
+                      .toList();
+                    //Navigate to the categoryItems screen with filtered list
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (_)=>CategoryItems(
+                          category: category[index].name,
+                          categoryItems: filterItems,
+                        ),
+                      ),
+                    );
+                  },
                   child: Column(
                     children: [
                       Container(padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -151,10 +171,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   (index){
                     final productItems = ProductCurated[index];
                     return Padding(padding: index == 0
-                        ? EdgeInsets.symmetric(horizontal: 20)
-                        :EdgeInsets.only(right: 20),
+                        ? const EdgeInsets.symmetric(horizontal: 20)
+                        : const EdgeInsets.only(right: 20),
                       child: InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.push(context, MaterialPageRoute(builder: (_)=>ProductDetail(productDetail:productItems),),);
+                        },
                         child: CuratedItems(
                           productItems: productItems,
                           size: size,
