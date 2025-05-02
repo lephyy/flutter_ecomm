@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ecomm/page/cart/cart_screen.dart';
 import 'package:flutter_ecomm/page/homepage/home_screen.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
@@ -14,7 +15,7 @@ class _HomeMainState extends State<HomeMain> {
   final List pages = [
     const HomeScreen(),
     const Scaffold(),
-    const Scaffold(),
+    const CartScreen(),
     const Scaffold(),
   ];
   @override

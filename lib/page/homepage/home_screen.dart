@@ -77,12 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: [
                   Text(
                     "Shop by Category",
-                    style: TextStyle(
-                      fontSize: 16,
-                      letterSpacing: 0,
-                      color: Colors.black87,
-                      fontWeight: FontWeight.w600,
-                    ),
+                    style: poppinsBold,
                   ),
                   Text(
                     "See All",
