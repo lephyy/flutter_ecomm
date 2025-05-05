@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_ecomm/page/cart/cart_screen.dart';
 import 'package:flutter_ecomm/page/homepage/home_screen.dart';
+import 'package:flutter_ecomm/page/profile/profile_screen.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
 class HomeMain extends StatefulWidget {
@@ -16,7 +17,7 @@ class _HomeMainState extends State<HomeMain> {
     const HomeScreen(),
     const Scaffold(),
     const CartScreen(),
-    const Scaffold(),
+    const ProfileScreen(),
   ];
   @override
   Widget build(BuildContext context) {

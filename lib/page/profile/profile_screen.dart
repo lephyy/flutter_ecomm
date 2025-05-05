@@ -3,20 +3,19 @@ import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
 import '../login/signin_screen.dart';
 
-class AdminHome extends StatefulWidget {
-  const AdminHome({super.key});
+class ProfileScreen extends StatefulWidget {
+  const ProfileScreen({super.key});
 
   @override
-  State<AdminHome> createState() => _AdminHomeState();
+  State<ProfileScreen> createState() => _ProfileScreenState();
 }
 
-class _AdminHomeState extends State<AdminHome> {
+class _ProfileScreenState extends State<ProfileScreen> {
   // Create reference to GetStorage for handling the token
   final box = GetStorage();
 
   // Logout function to clear token and navigate to login
   void _handleLogout() {
-    // Show confirmation dialog
     showDialog(
       context: context,
       builder: (BuildContext context) {
@@ -48,7 +47,7 @@ class _AdminHomeState extends State<AdminHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Admin Dashboard"),
+        title: const Text("Profile"),
         actions: [
           // Add a logout icon in the app bar for easy access
           IconButton(
@@ -62,10 +61,6 @@ class _AdminHomeState extends State<AdminHome> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Text(
-                "Welcome to the Admin Dashboard",
-                style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-              ),
               const SizedBox(height: 30),
               ElevatedButton.icon(
                 onPressed: _handleLogout,
