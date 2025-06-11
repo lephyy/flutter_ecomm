@@ -67,14 +67,14 @@ class _AdminHomeState extends State<AdminHome> {
                 style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
               ),
               const SizedBox(height: 30),
-              ElevatedButton.icon(
-                onPressed: _handleLogout,
-                icon: const Icon(Icons.logout),
-                label: const Text("Sign Out"),
-                style: ElevatedButton.styleFrom(
-                  padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
-                ),
-              )
+              // ElevatedButton.icon(
+              //   onPressed: _handleLogout,
+              //   icon: const Icon(Icons.logout),
+              //   label: const Text("Sign Out"),
+              //   style: ElevatedButton.styleFrom(
+              //     padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 12),
+              //   ),
+              // )
             ],
           )
       ),

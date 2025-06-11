@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_ecomm/models/category_model.dart';
 import 'package:flutter_ecomm/page/catgory.dart';
 import 'package:flutter_ecomm/utils/app_styles.dart';
-import 'package:flutter_ecomm/widgets/curated_items.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
-import '../../models/model.dart';
+import '../../models/product_model.dart';
 import '../../widgets/banner.dart';
+import '../../widgets/special_for_you_products.dart';
+import '../cart/cart_screen.dart';
+import '../cart/shopping_cart_empty.dart';
 import '../details/detail_screen.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -32,34 +36,33 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Image.asset("assets/images/popmart.png",
+                  Image.asset("assets/images/logo/popmart.png",
                     height: 40,
                   ),
                   Stack(
                     clipBehavior: Clip.none,
                     children: [
-                      Icon(
-                        Iconsax.shopping_bag,
-                        size: 28,
+                      IconButton(
+                        onPressed: () => Get.to(() => ShoppingCartEmpty() ),
+                        icon: Icon(Iconsax.message_2_copy, size: 28,),
                       ),
-                      //We make it dynamic during backend part
                       Positioned(
-                        right: -3,top: -5,
+                        right:3,top: 3,
                         child: Container(
                           padding: EdgeInsets.all(4),
-                          decoration: BoxDecoration(
-                            color: Colors.red,
-                            shape: BoxShape.circle,
-                          ),
-                          child: Center(
-                            child: Text(
-                              "3",
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
-                          ),
+                          // decoration: BoxDecoration(
+                          //   color: Colors.red,
+                          //   shape: BoxShape.circle,
+                          // ),
+                          // child: Center(
+                          //   child: Text(
+                          //     "2",
+                          //     style: TextStyle(
+                          //       color: Colors.white,
+                          //       fontWeight: FontWeight.bold,
+                          //     ),
+                          //   ),
+                          // ),
                         )
                       ),
                     ],
@@ -98,7 +101,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 children: List.generate(category.length, (index)=>InkWell(
                   onTap: (){
                     //Filter products based on the selected category
-                    final filterItems = ProductCurated
+                    final filterItems = ProductSpecial
                       .where((item)=>
                         item.category.toLowerCase() ==
                         category[index].name.toLowerCase())
@@ -137,7 +140,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    "Curated For You",
+                    "Special For You",
                     style: TextStyle(
                       fontSize: 16,
                       letterSpacing: 0,
@@ -156,35 +159,12 @@ class _HomeScreenState extends State<HomeScreen> {
                 ],
               ),
             ),
-            //For Curated Items
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: 
-                List.generate(
-                  ProductCurated.length,
-                  (index){
-                    final productItems = ProductCurated[index];
-                    return Padding(padding: index == 0
-                        ? const EdgeInsets.symmetric(horizontal: 20)
-                        : const EdgeInsets.only(right: 20),
-                      child: InkWell(
-                        onTap: () {
-                          Navigator.push(context, MaterialPageRoute(builder: (_)=>ProductDetail(productDetail:productItems),),);
-                        },
-                        child: CuratedItems(
-                          productItems: productItems,
-                          size: size,
-                        ),
-                      ),
-                    );
-                  },
-                ),
-              ),
-            )
+            //For Special Items
+            BuildSpecialProducts(size: size)
           ],
         ),
       ),
     );
   }
 }
+

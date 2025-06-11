@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_ecomm/models/model.dart';
+import 'package:flutter_ecomm/models/product_model.dart';
 import 'package:flutter_ecomm/models/sub_category.dart';
 import 'package:iconsax_flutter/iconsax_flutter.dart';
 
@@ -9,7 +9,7 @@ import 'details/detail_screen.dart';
 
 class CategoryItems extends StatelessWidget {
   final String category;
-  final List<AppModel> categoryItems;
+  final List<ProductModel> categoryItems;
   const CategoryItems({
     super.key,
     required this.category,
@@ -157,7 +157,7 @@ class CategoryItems extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                           builder: (_)=>ProductDetail(
-                              productDetail: item,
+                              // productDetail: item,
                             ),
                           ),
                         );
