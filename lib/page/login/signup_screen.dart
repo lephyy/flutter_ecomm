@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_ecomm/controllers/authentication.dart';
 import 'package:flutter_ecomm/page/login/signin_screen.dart';
 import 'package:get/get.dart';
 
 import '../../utils/app_textstyles.dart';
 import '../../widgets/custom_textfield.dart';
-import 'main_screen.dart';
 
 class SignUpScreen extends StatelessWidget{
   SignUpScreen({super.key});
@@ -38,21 +36,21 @@ class SignUpScreen extends StatelessWidget{
 
               const SizedBox(height: 20),
               Text(
-                'Create Account',
+                'Signup Account',
                 style: AppTextStyle.withColor(
                   AppTextStyle.h1,
                   Theme.of(context).textTheme.bodyLarge!.color!,
                 ),
               ),
 
-              const SizedBox(height: 8),
-              Text(
-                'Signup to get started',
-                style: AppTextStyle.withColor(
-                  AppTextStyle.bodyLarge,
-                  isDark ? Colors.grey[400]! : Colors.grey[600]!,
-                ),
-              ),
+              // const SizedBox(height: 8),
+              // Text(
+              //   'Signup to get started',
+              //   style: AppTextStyle.withColor(
+              //     AppTextStyle.bodyLarge,
+              //     isDark ? Colors.grey[400]! : Colors.grey[600]!,
+              //   ),
+              // ),
 
               const SizedBox(height: 40),
               CustomTextfield(

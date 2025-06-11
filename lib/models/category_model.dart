@@ -6,23 +6,23 @@ class Category{
 List<Category> category=[
   Category(
     name: "Blind Boxes",
-    image: "assets/images/blindbox.png",
+    image: "assets/images/categorys/blindbox.png",
   ),
   Category(
     name: "Bags",
-    image: "assets/images/sdachgame.jpg",
+    image: "assets/images/categorys/category1.jpg",
   ),
   Category(
     name: "MEGA",
-    image: "assets/images/mega.png",
+    image: "assets/images/categorys/mega.png",
   ),
   Category(
     name: "Figurine",
-    image: "assets/images/figures.jpg",
+    image: "assets/images/categorys/category2.jpg",
   ),
   Category(
-    name: "Accessories",
-    image: "assets/images/sdachgame.jpg",
+    name: "Plush Toys",
+    image: "assets/images/categorys/category3.jpg",
   ),
 ];
 

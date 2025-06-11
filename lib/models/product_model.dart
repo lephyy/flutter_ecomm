@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-class AppModel{
+class ProductModel{
   late final String name,image,description,category;
   late final double rating;
   late final double review,price;
   bool isCheck;
 
-  AppModel({
+  ProductModel({
     required this.name,
     required this.image,
     required this.rating,
@@ -18,10 +18,10 @@ class AppModel{
   });
 }
 
-List<AppModel> ProductCurated = [
-  AppModel(
+List<ProductModel> ProductSpecial = [
+  ProductModel(
       name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
-      image: "assets/images/product1.png",
+      image: "assets/images/products/product1.png",
       rating: 4.5,
       price: 39.99,
       review: 136,
@@ -29,9 +29,9 @@ List<AppModel> ProductCurated = [
       isCheck: true,
       category: "Blind Boxes",
   ),
-  AppModel(
+  ProductModel(
     name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
-    image: "assets/images/product1.png",
+    image: "assets/images/products/product1.png",
     rating: 4.5,
     price: 39.99,
     review: 136,
@@ -39,9 +39,9 @@ List<AppModel> ProductCurated = [
     isCheck: true,
     category: "Blind Boxes",
   ),
-  AppModel(
+  ProductModel(
     name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
-    image: "assets/images/product1.png",
+    image: "assets/images/products/product1.png",
     rating: 4.5,
     price: 39.99,
     review: 136,
@@ -49,9 +49,9 @@ List<AppModel> ProductCurated = [
     isCheck: true,
     category: "Blind Boxes",
   ),
-  AppModel(
+  ProductModel(
     name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
-    image: "assets/images/product1.png",
+    image: "assets/images/products/product1.png",
     rating: 4.5,
     price: 39.99,
     review: 136,
@@ -59,9 +59,9 @@ List<AppModel> ProductCurated = [
     isCheck: true,
     category: "Blind Boxes",
   ),
-  AppModel(
+  ProductModel(
     name: "The MONSTERS COCA-COLA SERIES-Vinyl Face Blind Box",
-    image: "assets/images/product1.png",
+    image: "assets/images/products/product1.png",
     rating: 4.5,
     price: 39.99,
     review: 136,

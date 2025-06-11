@@ -6,30 +6,30 @@ class SubCategory{
 List<SubCategory> subcategory = [
   SubCategory(
       name: "Blind Boxes",
-      image: "assets/images/blindbox.png"
+      image: "assets/images/categorys/blindbox.png"
   ),
   SubCategory(
       name: "Blind Boxes",
-      image: "assets/images/blindbox.png"
+      image: "assets/images/categorys/blindbox.png"
   ),
   SubCategory(
       name: "Blind Boxes",
-      image: "assets/images/blindbox.png"
+      image: "assets/images/categorys/blindbox.png"
   ),
   SubCategory(
       name: "Blind Boxes",
-      image: "assets/images/blindbox.png"
+      image: "assets/images/categorys/blindbox.png"
   ),
   SubCategory(
       name: "Blind Boxes",
-      image: "assets/images/blindbox.png"
+      image: "assets/images/categorys/blindbox.png"
   ),
   SubCategory(
       name: "Blind Boxes",
-      image: "assets/images/blindbox.png"
+      image: "assets/images/categorys/blindbox.png"
   ),
   SubCategory(
       name: "Blind Boxes",
-      image: "assets/images/blindbox.png"
+      image: "assets/images/categorys/blindbox.png"
   ),
 ];

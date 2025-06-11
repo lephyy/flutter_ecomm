@@ -39,12 +39,13 @@ dependencies:
   get: ^4.6.6
   get_storage: ^2.1.1
   share_plus: ^11.0.0
-  dio: ^5.8.0+1
   get_it: ^8.0.3
   shared_preferences: ^2.5.3
   either_dart: ^1.0.0
   flutter_bloc: ^9.1.1
-
+  carousel_slider: ^5.0.0
+  cached_network_image: ^3.4.1
+  flutter_paypal_payment: ^1.0.8
 
 dev_dependencies:
   flutter_test:
@@ -71,7 +72,13 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
   - assets/images/
-#  - assets/icons/
+  - assets/images/banners/
+  - assets/images/brands/
+  - assets/images/categorys/
+  - assets/images/products/
+  - assets/images/logo/
+  - assets/images/profile/
+  - assets/icons/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
